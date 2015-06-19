@@ -209,8 +209,8 @@ var MapsLib = {
       if (fire1)
         whereClause += " AND 'Fire flag' = 1";
           
-      whereClause += " AND 'DATE RECEIVED' >= '" + $('#startDate').html() + "'";
-      whereClause += " AND 'DATE RECEIVED' <= '" + $('#endDate').html() + "'";
+      whereClause += " AND 'Startdato' >= '" + $('#startDate').html() + "'";
+      whereClause += " AND 'Startdato' <= '" + $('#endDate').html() + "'";
     }
 
     if (address != "") {
