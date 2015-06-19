@@ -18,7 +18,7 @@ var MapsLib = {
 
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId: "1fK7H4ZDsWT-9sa09CjuJft3UBzxGcQlyPRBygEc", //main table for building data
+  fusionTableId: "1XC8p6RbE1lCkzTFMG2kriy25A2TXMylvA6PRJkPw", //main table for building data
   
   povertyTableId: "15FyZq0hRcxUg9uCO_2DZm6vLvxKGpEwaMHs00lw",
   unemploymentTableId: "1YB3wtRv-UZXkJ8N1T83MDmOvA1ccuP_M1vHNOQs",
@@ -29,17 +29,17 @@ var MapsLib = {
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
-  googleApiKey:       "AIzaSyAcsnDc7_YZskPj4ep3jT_fkpB3HI_1a98",
+  googleApiKey:       "AIzaSyAdiiB7Wr3emAkS1k-opR-H4toG5Bj0Nzc",
 
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
   locationColumn:     "Location",
 
-  map_centroid:       new google.maps.LatLng(41.8781136, -87.66677856445312), //center that your map defaults to
-  locationScope:      "chicago",      //geographical area appended to all address searches
-  recordName:         "building",       //for showing number of results
-  recordNamePlural:   "buildings",
+  map_centroid:       new google.maps.LatLng(56.157370, 10.203574), //center that your map defaults to
+  locationScope:      "aarhus",      //geographical area appended to all address searches
+  recordName:         "Case",       //for showing number of results
+  recordNamePlural:   "Cases",
 
   searchRadius:       1610,            //in meters ~ 1/2 mile
   defaultZoom:        11,             //zoom level when map is loaded (bigger is more zoomed in)
@@ -209,8 +209,8 @@ var MapsLib = {
       if (fire1)
         whereClause += " AND 'Fire flag' = 1";
           
-      whereClause += " AND 'DATE RECEIVED' >= '" + $('#startDate').html() + "'";
-      whereClause += " AND 'DATE RECEIVED' <= '" + $('#endDate').html() + "'";
+      whereClause += " AND 'Startdato' >= '" + $('#startDate').html() + "'";
+      whereClause += " AND 'Startdato' <= '" + $('#endDate').html() + "'";
     }
 
     if (address != "") {
