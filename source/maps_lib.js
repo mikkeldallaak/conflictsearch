@@ -209,7 +209,7 @@ var MapsLib = {
       if (fire1)
         whereClause += " AND 'Fire flag' = 1";
           
-      whereClause += " AND 'Startdato' >= '" + $('#startDate').html() + "'";
+      whereClause += " AND 'Date' >= '" + $('#startDate').html() + "'";
       whereClause += " AND 'Slutdato' <= '" + $('#endDate').html() + "'";
     }
 
